@@ -1,0 +1,17 @@
+5. Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = 1; i < n; i*=2) {
+for(int j = n; j > i; j--) {
+c++;
+}
+}
+
+Answer
+
+Explanation:
+The outer loop starts with i = 1 and multiplies i by 2 in each iteration (i *= 2), so i takes the values 1,2,4,8,…, until i becomes greater than or equal to n.The outer loop runs as long as i<n. Since i doubles in each iteration, the number of iterations of the outer loop is O(logn).
+
+The inner loop runs from j = n down to j = i + 1. The number of iterations of the inner loop depends on the current value of i in the outer loop.For each value of i, the inner loop runs approximately n−i times.When i=1, the inner loop runs n−1 times.When i=2, the inner loop runs n−2 times.When i=4, the inner loop runs n−4 times, and so on.
+
+Time Complexity:
+Thus, the time complexity of the code is O(n).

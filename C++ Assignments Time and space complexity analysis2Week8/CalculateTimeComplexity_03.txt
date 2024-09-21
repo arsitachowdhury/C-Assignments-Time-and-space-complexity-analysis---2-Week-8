@@ -1,0 +1,15 @@
+3.Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = 0; i < n; i++) {
+for(int j = 1; j * j < n; j *= 2) {
+c++;
+}
+}
+
+Answer
+
+Explanation:
+The outer for loop runs from i = 0 to i < n, so it iterates n times.The inner loop runs while j∗j<n, with j starting from 1 and doubling in each iteration (j *= 2).
+
+Time Complexity:
+The overall time complexity is O(nlogn).

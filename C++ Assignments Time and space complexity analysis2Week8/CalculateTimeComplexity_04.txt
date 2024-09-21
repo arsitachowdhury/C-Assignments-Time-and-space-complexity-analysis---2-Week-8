@@ -1,0 +1,17 @@
+4. Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = n; i > 0; i /= 2) {
+for(int j = 0; j < i; j ++) {
+c++;
+}
+}
+
+Answer
+
+Explanation:
+The outer loop starts with i = n and, in each iteration, i is halved (i /= 2).The condition for the outer loop is i > 0, so it continues halving i until i = 1, after which the loop terminates.
+For each iteration of the outer loop, the inner loop runs i times, where i is the current value determined by the outer loop.So, when i = n, the inner loop runs n times; when i = n/2, it runs n/2 times, and so on, until i = 1, when it runs once.
+
+
+Time Complexity:
+The overall time complexity is O(n).
